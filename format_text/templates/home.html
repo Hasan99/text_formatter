@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Text Formatter</title>
+    </head>
+    <body>
+        <h2>Text Formatter</h2>
+        <h3>Enter your text below to format</h3>
+        <hr>
+        <form action="format_text">
+            <textarea cols="100" id="" name="text" rows="10">{{ formatted_text }}</textarea>
+            <br>
+            <input id="remove_punctuations" name="remove_punctuations" type="checkbox" value="True">
+            <label for="remove_punctuations">Remove Punctuations</label>
+            <br>
+            <input id="capitalize_all" name="capitalize_all" type="checkbox" value="True">
+            <label for="capitalize_all">Capitalize All</label>
+            <br>
+            <input id="remove_extra_spaces" name="remove_extra_spaces" type="checkbox" value="True">
+            <label for="remove_extra_spaces">Remove Extra Spaces</label>
+            <br>
+            <input id="remove_lines" name="remove_lines" type="checkbox" value="True">
+            <label for="remove_lines">Remove Lines</label>
+            <br>
+            <input id="count_characters" name="count_characters" type="checkbox" value="True">
+            <label for="count_characters">Count Characters</label>
+            <br>
+            <br>
+            <input type="submit" value="Format Text">
+        </form>
+    </body>
+</html>
