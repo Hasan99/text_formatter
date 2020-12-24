@@ -9,7 +9,13 @@
         <h3>Enter your text below to format</h3>
         <hr>
         <form action="format_text">
+            <label for="" style="color: red;">{{ error_message }}</label>
+            <br>
             <textarea cols="100" id="" name="text" rows="10">{{ formatted_text }}</textarea>
+            <br>
+            <label for="" style="color: green;">{{ result_message }}</label>
+            <br>
+            <label for="" style="color: blue;">{{ count_of_characters }}</label>
             <br>
             <input id="remove_punctuations" name="remove_punctuations" type="checkbox" value="True">
             <label for="remove_punctuations">Remove Punctuations</label>
