@@ -16,6 +16,14 @@ def remove_punctuation(text):
     return text_without_punctuations
 
 
+def remove_line(text):
+    while "\r" and "\n" in text:
+        text = text.replace("\r", "")
+        text = text.replace("\n", "")
+
+    return text
+
+
 def format_text(request):
     data = {
         "formatted_text": "",
@@ -48,7 +56,7 @@ def format_text(request):
             data["formatted_text"] = data["formatted_text"].strip()
             no_operation_specified = False
         if remove_lines:
-            data["formatted_text"] = data["formatted_text"].rstrip("\n")
+            data["formatted_text"] = remove_line(data["formatted_text"])
             no_operation_specified = False
         if count_characters:
             data["count_of_characters"] = f"Characters Count: {len(data['formatted_text'])}"
